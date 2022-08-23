@@ -15,8 +15,9 @@ async function bootstrap() {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Hallo WOi</title>
+      <title>Nest Inertia</title>
       <link rel="stylesheet" href="/css/main.css">
+      <script src="https://cdn.tailwindcss.com"></script>
       <script defer type="module" src="/js/bundle.js"></script>
   </head>
   <body>
@@ -26,7 +27,7 @@ async function bootstrap() {
   </html>`;
 
   app.use(inertia(html, 1));
-  // app.setViewEngine('hbs');
+
   await app.listen(3000);
 }
 bootstrap();

@@ -1,4 +1,4 @@
-import { Controller, Get, Req } from '@nestjs/common';
+import { Controller, Get, Post, Req } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,11 +7,17 @@ export class AppController {
 
   @Get()
   getHello(@Req() request: any) {
+    //Routing Index page
     return request.Inertia.setStatusCode(200).render({
       component: 'index',
       props: {
-        name: 'Firdaus',
+        name: 'Muhammad Firdaus',
       },
     });
+  }
+
+  @Post('/home')
+  postTest() {
+    return 'Hallo';
   }
 }

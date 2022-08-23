@@ -5,9 +5,8 @@ import { createInertiaApp } from '@inertiajs/inertia-react';
 createInertiaApp({
   resolve: (name) => require(`./pages/${name}`),
   setup({ el, App, props }) {
-    const container = document.querySelector('#app');
-    // console.log('El: ', el);
-    const root = createRoot(container);
+    // const container = document.querySelector('#app');
+    const root = createRoot(el);
     root.render(<App {...props} />);
   },
 });
