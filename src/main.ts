@@ -16,9 +16,8 @@ async function bootstrap() {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Nest Inertia</title>
-      <link rel="stylesheet" href="/css/main.css">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <script defer type="module" src="/js/bundle.js"></script>
+      <link rel="stylesheet" href="/resource/main.css">
+      <script defer type="module" src="/resource/bundle.js"></script>
   </head>
   <body>
       
