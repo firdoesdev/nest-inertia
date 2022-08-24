@@ -7,6 +7,7 @@ export class AppController {
 
   @Get()
   getHello(@Req() request: any) {
+    console.log(this.appService.getHello());
     //Routing Index page
     return request.Inertia.setStatusCode(200).render({
       component: 'index',

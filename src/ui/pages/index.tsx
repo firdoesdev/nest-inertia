@@ -1,11 +1,24 @@
 import React from 'react';
+import { Layout } from 'antd';
+
+const { Header, Content, Footer } = Layout;
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-semibold animate-bounce">Hello World</h1>
-      <h2 className="text-sm text-black text-opacity-50">Inertia + Nest JS</h2>
-    </div>
+    <Layout style={{ minHeight: '100vh' }}>
+      <Header style={{ backgroundColor: 'white' }}></Header>
+      <Content
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: 'white',
+        }}
+      >
+        <h1>Hallo Inertia + Ant Design + Nest JS</h1>
+      </Content>
+      <Footer style={{ backgroundColor: 'white' }}></Footer>
+    </Layout>
   );
 };
 
