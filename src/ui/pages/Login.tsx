@@ -20,7 +20,7 @@ const Login: FC = () => {
 
     const handleSubmit = (event) => {
         event.prefentDefault()
-        Inertia.post('/login')
+        Inertia.post('/verified')
     }
 
     return (
@@ -35,20 +35,18 @@ const Login: FC = () => {
             >
                 <Form
                     name="login"
-                    className="login-form"
                     onFinish={handleSubmit}
+                    style={{maxWidth: "300px"}}
                 >
                     <Form.Item
-                        label="Email:"
                         name="email"
                         rules={[{required: true, message: 'Please input your email!'}]}
                     >
-                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" id='email' value={data.email} type="text" onChange={event => setData('email', event.target.value)}/>
+                        <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Email" id='email' value={data.email} type="text" onChange={event => setData('email', event.target.value)}/>
                         {errors.email && <div>{errors.email}</div>}
                     </Form.Item>
 
                     <Form.Item
-                        label="Password:"
                         name="password"
                         rules={[{ required: true, message: 'Please input your Password!' }]}
                     >
@@ -61,7 +59,7 @@ const Login: FC = () => {
                     </Form.Item>
                     
                     <Form.Item>
-                        <Button type="primary" htmlType="submit" className="login-form-button" disabled={processing}>Login</Button>
+                        <Button type="primary" htmlType="submit" disabled={processing} style={{width: "100%"}}>Login</Button>
                         Or <Link href={'/register'}>Register now!</Link>
                     </Form.Item>
                 </Form>

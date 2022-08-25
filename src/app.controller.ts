@@ -17,15 +17,15 @@ export class AppController {
     });
   }
 
-  @Post('/login')
+  @Post('/verified')
   postTest() {
-    return 'Hallo';
+    return `User's login is verified`;
   }
 
   @Get('/login')
   getLogin(@Req() request: any) {
-    console.log(this.appService.getHello());
-    //Routing Index page
+    console.log(this.appService.getLogin());
+    //Routing Login page
     return request.Inertia.setStatusCode(200).render({
       component: 'Login',
     });
