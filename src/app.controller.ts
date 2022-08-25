@@ -18,7 +18,7 @@ export class AppController {
   }
 
   @Post('/verified')
-  postTest() {
+  postLogin() {
     return `User's login is verified`;
   }
 

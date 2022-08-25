@@ -11,7 +11,7 @@ const Login: FC = () => {
         setData,
         post,
         processing,
-        errors
+        // errors
     } = useForm({
         email: '',
         password: '',
@@ -26,7 +26,7 @@ const Login: FC = () => {
         // event.preventDefault()
         console.log(data.email)
         console.log(data.password)
-        post('/verified')
+        Inertia.post('/verified')
     }
 
     return (
