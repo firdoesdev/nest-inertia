@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req } from '@nestjs/common';
+import { Controller, Get, Post, Req, Body } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -14,6 +14,21 @@ export class AppController {
       props: {
         name: 'Muhammad Firdaus',
       },
+    });
+  }
+
+  @Get('/register')
+  getRegister(@Req() request: any) {
+    return request.Inertia.setStatusCode(200).render({
+      component: 'register',
+    });
+  }
+
+  @Post('/register')
+  postRegister(@Req() request: any, @Body() body: any) {
+    console.log(body);
+    return request.Inertia.setStatusCode(200).render({
+      component: 'register',
     });
   }
 

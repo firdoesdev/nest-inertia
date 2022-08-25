@@ -19,9 +19,8 @@ async function bootstrap() {
       <link rel="stylesheet" href="/resource/main.css">
       <script defer type="module" src="/resource/bundle.js"></script>
   </head>
-  <body>
-      
-  <body id="app" data-page='${pageString}'></body>
+  <body>  
+    <div id="app" data-page='${pageString}'></div>
   </body>
   </html>`;
 
