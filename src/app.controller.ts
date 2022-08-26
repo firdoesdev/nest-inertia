@@ -17,6 +17,21 @@ export class AppController {
     });
   }
 
+  @Post('/verified')
+  postLogin() {
+    return `User's login is verified`;
+  }
+
+  @Get('/login')
+  getLogin(@Req() request: any) {
+    console.log(this.appService.getLogin());
+    //Routing Login page
+    return request.Inertia.setStatusCode(200).render({
+      component: 'Login',
+    });
+  }
+
+>>>>>>> feature/register-pag
   @Get('/register')
   getRegister(@Req() request: any) {
     return request.Inertia.setStatusCode(200).render({

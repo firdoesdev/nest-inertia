@@ -9,6 +9,6 @@ createInertiaApp({
   setup({ el, App, props }) {
     // const container = document.querySelector('#app');
     const root = createRoot(el);
-    root.render(<App {...props} />);
+    root.render(<App {...props}/>);
   },
 });
