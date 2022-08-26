@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { useForm } from '@inertiajs/inertia-react'
+import { useForm, Link } from '@inertiajs/inertia-react'
 import { Button, Form, Input } from 'antd';
 import { FormValue } from './entity';
+
 
 const RegisterForm: FC = () => {
   const { data, setData, post, processing, errors } = useForm({
@@ -111,13 +112,15 @@ const RegisterForm: FC = () => {
           Register
         </Button>
 
-        <Button
-          type="default"
-          htmlType="button"
-          className="register__login_btn"
-        >
-          Login
-        </Button>
+        <Link href="/login">
+          <Button
+            type="default"
+            htmlType="button"
+            className="register__login_btn"
+          >
+            Login
+          </Button>
+        </Link>
       </Form.Item>
     </Form>
   );

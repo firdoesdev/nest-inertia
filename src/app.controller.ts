@@ -31,7 +31,6 @@ export class AppController {
     });
   }
 
->>>>>>> feature/register-pag
   @Get('/register')
   getRegister(@Req() request: any) {
     return request.Inertia.setStatusCode(200).render({
