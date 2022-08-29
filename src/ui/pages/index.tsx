@@ -17,7 +17,7 @@ const App: React.FC = () => {
         }}
       >
         <Space>
-          <Link href="/registrasi" as="button" type="button">Register</Link>
+          <Link href="/register" as="button" type="button">Register</Link>
           <Link href="/login" as="button" type="button">Login</Link>
         </Space>
       </Content>
